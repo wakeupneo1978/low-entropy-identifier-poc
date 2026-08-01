@@ -1,0 +1,62 @@
+{
+  "database": {
+    "checks": {
+      "all_emails_use_invalid_tld": true,
+      "all_identifier_hashes_are_sha256_length": true,
+      "all_names_are_synthetic": true,
+      "all_password_controls_use_scrypt": true,
+      "all_tables_have_12_rows": true,
+      "dataset_marked_synthetic": true
+    },
+    "counts": {
+      "auth_users": 12,
+      "case_notes": 12,
+      "contact_details": 12,
+      "customer_core": 12,
+      "defended_identifiers": 12,
+      "financial_profile": 12,
+      "staging_identity": 12
+    },
+    "sha256": "1dad8bc6260f16d2edd941a418ae02b1e162ed66d2230c674486f053e555c514"
+  },
+  "notebook": {
+    "cells": 30,
+    "code_cells": 14,
+    "markdown_cells": 16,
+    "outputs_embedded": 0,
+    "status": "passed"
+  },
+  "recorded_results": {
+    "benchmark_checks": {
+      "full_domain_measured": true,
+      "known_salt_full_domain_measured": true,
+      "known_salt_target_found": true,
+      "unsalted_target_found": true
+    },
+    "measured": {
+      "known_global_salt_full_seconds": 36.540536956,
+      "reconstruction_full_seconds": 35.900458962,
+      "recovered_profiles": 12,
+      "unsalted_full_seconds": 32.923065317,
+      "unsalted_hashes_per_second": 3037384.248
+    },
+    "reconstruction_checks": {
+      "no_consistency_failures": true,
+      "three_attack_paths_recorded": true,
+      "twelve_hashes_recovered": true,
+      "twelve_profiles_reconstructed": true,
+      "twelve_targets": true
+    }
+  },
+  "reproducibility": {
+    "byte_identical_in_this_environment": true,
+    "semantic_tables_identical": true
+  },
+  "scope": "entirely synthetic laboratory",
+  "tests": {
+    "reported_seconds": 0.793,
+    "status": "passed",
+    "tests_run": 5
+  },
+  "title": "Fulcrum/DNI research package validation"
+}

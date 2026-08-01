@@ -1,0 +1,308 @@
+{
+  "title": "Synthetic identity reconstruction",
+  "scope": "entirely_synthetic_lab_data",
+  "generated_at_utc": "2026-07-27T21:49:44Z",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.39",
+    "machine": "x86_64"
+  },
+  "database_sha256": "1dad8bc6260f16d2edd941a418ae02b1e162ed66d2230c674486f053e555c514",
+  "target_hashes": 12,
+  "recovered_hashes": 12,
+  "cracking": {
+    "candidate_format": "eight_digits_plus_mod23_letter",
+    "hash_input": "dni",
+    "salt_length_bytes": 0,
+    "candidate_limit": 100000000,
+    "target_count": 12,
+    "found_count": 12,
+    "threads": 9,
+    "elapsed_seconds": 35.900458962,
+    "hashes_per_second": 2785479.709,
+    "matches": [
+      {
+        "sha256": "11237d5ecf26009aef91249e817ecda801f8b2a9911525c009c15d5e980a1a2f",
+        "dni": "00001234S"
+      },
+      {
+        "sha256": "b12486bf5cfb77734f45558462c86977ab45e586e7c857670119cae4a0e0a450",
+        "dni": "00120045P"
+      },
+      {
+        "sha256": "c59298aedba5e5a252fb6dad5ca2e25fe03e1ef5fde19648f6cfeba32789133c",
+        "dni": "00987654B"
+      },
+      {
+        "sha256": "c3ed2291de170e11c0f6f8a1eb7270407ee1796e9d67360bdf05d5b7b2e520d6",
+        "dni": "07654321J"
+      },
+      {
+        "sha256": "1c9f96328944627a83b96f2f7d98c97f32664101ff98a1c2efb65e75a3417300",
+        "dni": "12345678Z"
+      },
+      {
+        "sha256": "247eefbdd1f8c188c3bb101e7e4aac1bdd6f7bf879e97d12d88b4207a1d80fc7",
+        "dni": "23456789D"
+      },
+      {
+        "sha256": "a1344ca2bb40e8edfea8bd5ce92b436ad1bf113f0f556a0df150da8b7cf6217f",
+        "dni": "34567890V"
+      },
+      {
+        "sha256": "8b85c64c3684d24f1560b408826f8d8afd6a53672bae8d4504664b939a7f8898",
+        "dni": "45678901G"
+      },
+      {
+        "sha256": "c4ba72cb0a975d8fd7d07161a68b19840c82a1a8d6609659dbfbe51e4738cb11",
+        "dni": "56789012B"
+      },
+      {
+        "sha256": "42d7a9639d80c09c3833ba309738b0150b599e94ed82a6be7d427ce0eaadb6e4",
+        "dni": "67890123B"
+      },
+      {
+        "sha256": "eb6940ff4eb39af02b1af7644a31eda8a778f9649ee5d72774c552916f07de93",
+        "dni": "78901234X"
+      },
+      {
+        "sha256": "3cc96bb0c334880e0e7bdf8a10f32db964120c134735f27b37c5bf188bd924ce",
+        "dni": "98765432M"
+      }
+    ]
+  },
+  "join_key": "link_key",
+  "attack_paths": {
+    "hash_enumeration": {
+      "source": "customer_core.nif_sha256",
+      "result": "recovered_nif",
+      "requires_staging_plaintext": false
+    },
+    "plaintext_staging_linkage": {
+      "source": "staging_identity.nif_plain",
+      "link": "link_key",
+      "requires_hash_recovery": false
+    },
+    "weak_obfuscation": {
+      "source": "case_notes.nif_caesar_hex",
+      "result": "decoded_weak_obfuscation",
+      "requires_hash_recovery": false
+    }
+  },
+  "tables_joined": [
+    "customer_core",
+    "staging_identity",
+    "contact_details",
+    "financial_profile",
+    "case_notes",
+    "auth_users"
+  ],
+  "consistency_failures": [],
+  "elapsed_total_seconds": 35.904748859000165,
+  "identity_packages": [
+    {
+      "customer_id": 1,
+      "link_key": "745bb69342eb648dc822de5d",
+      "recovered_nif": "00001234S",
+      "decoded_weak_obfuscation": "00001234S",
+      "synthetic_name": "PERSONA_SINTETICA_001",
+      "birth_year": 1968,
+      "postcode": "28001",
+      "email": "persona001@example.invalid",
+      "phone": "+34910000001",
+      "policy_number": "POL-LAB-00000001",
+      "iban_surrogate": "ES00-LAB-0000000000000001",
+      "income_band": "MEDIUM",
+      "risk_score": 437,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_001",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 2,
+      "link_key": "ae0ecdbb82618f95c7762c96",
+      "recovered_nif": "00120045P",
+      "decoded_weak_obfuscation": "00120045P",
+      "synthetic_name": "PERSONA_SINTETICA_002",
+      "birth_year": 1971,
+      "postcode": "28002",
+      "email": "persona002@example.invalid",
+      "phone": "+34910000002",
+      "policy_number": "POL-LAB-00000002",
+      "iban_surrogate": "ES00-LAB-0000000000000002",
+      "income_band": "HIGH",
+      "risk_score": 474,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_002",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 3,
+      "link_key": "c6ffdaf3f6069ad4b36e1c4f",
+      "recovered_nif": "00987654B",
+      "decoded_weak_obfuscation": "00987654B",
+      "synthetic_name": "PERSONA_SINTETICA_003",
+      "birth_year": 1974,
+      "postcode": "28003",
+      "email": "persona003@example.invalid",
+      "phone": "+34910000003",
+      "policy_number": "POL-LAB-00000003",
+      "iban_surrogate": "ES00-LAB-0000000000000003",
+      "income_band": "LOW",
+      "risk_score": 511,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_003",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 4,
+      "link_key": "501e51ef35d201f8a205d4e4",
+      "recovered_nif": "07654321J",
+      "decoded_weak_obfuscation": "07654321J",
+      "synthetic_name": "PERSONA_SINTETICA_004",
+      "birth_year": 1977,
+      "postcode": "28004",
+      "email": "persona004@example.invalid",
+      "phone": "+34910000004",
+      "policy_number": "POL-LAB-00000004",
+      "iban_surrogate": "ES00-LAB-0000000000000004",
+      "income_band": "MEDIUM",
+      "risk_score": 548,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_004",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 5,
+      "link_key": "4e792dd49503672efc25a7e2",
+      "recovered_nif": "12345678Z",
+      "decoded_weak_obfuscation": "12345678Z",
+      "synthetic_name": "PERSONA_SINTETICA_005",
+      "birth_year": 1980,
+      "postcode": "28005",
+      "email": "persona005@example.invalid",
+      "phone": "+34910000005",
+      "policy_number": "POL-LAB-00000005",
+      "iban_surrogate": "ES00-LAB-0000000000000005",
+      "income_band": "HIGH",
+      "risk_score": 585,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_005",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 6,
+      "link_key": "5b8a0fd32a8b59b5f6c276ed",
+      "recovered_nif": "23456789D",
+      "decoded_weak_obfuscation": "23456789D",
+      "synthetic_name": "PERSONA_SINTETICA_006",
+      "birth_year": 1983,
+      "postcode": "28006",
+      "email": "persona006@example.invalid",
+      "phone": "+34910000006",
+      "policy_number": "POL-LAB-00000006",
+      "iban_surrogate": "ES00-LAB-0000000000000006",
+      "income_band": "LOW",
+      "risk_score": 622,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_006",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 7,
+      "link_key": "9f09e4ee375dd19dac78854d",
+      "recovered_nif": "34567890V",
+      "decoded_weak_obfuscation": "34567890V",
+      "synthetic_name": "PERSONA_SINTETICA_007",
+      "birth_year": 1986,
+      "postcode": "28007",
+      "email": "persona007@example.invalid",
+      "phone": "+34910000007",
+      "policy_number": "POL-LAB-00000007",
+      "iban_surrogate": "ES00-LAB-0000000000000007",
+      "income_band": "MEDIUM",
+      "risk_score": 659,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_007",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 8,
+      "link_key": "150125a70f44f57440479f57",
+      "recovered_nif": "45678901G",
+      "decoded_weak_obfuscation": "45678901G",
+      "synthetic_name": "PERSONA_SINTETICA_008",
+      "birth_year": 1989,
+      "postcode": "28008",
+      "email": "persona008@example.invalid",
+      "phone": "+34910000008",
+      "policy_number": "POL-LAB-00000008",
+      "iban_surrogate": "ES00-LAB-0000000000000008",
+      "income_band": "HIGH",
+      "risk_score": 696,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_008",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 9,
+      "link_key": "58216786a857b2ecd2d945e3",
+      "recovered_nif": "56789012B",
+      "decoded_weak_obfuscation": "56789012B",
+      "synthetic_name": "PERSONA_SINTETICA_009",
+      "birth_year": 1992,
+      "postcode": "28009",
+      "email": "persona009@example.invalid",
+      "phone": "+34910000009",
+      "policy_number": "POL-LAB-00000009",
+      "iban_surrogate": "ES00-LAB-0000000000000009",
+      "income_band": "LOW",
+      "risk_score": 733,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_009",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 10,
+      "link_key": "3ad185864f8a4705592702c2",
+      "recovered_nif": "67890123B",
+      "decoded_weak_obfuscation": "67890123B",
+      "synthetic_name": "PERSONA_SINTETICA_010",
+      "birth_year": 1995,
+      "postcode": "28010",
+      "email": "persona010@example.invalid",
+      "phone": "+34910000010",
+      "policy_number": "POL-LAB-00000010",
+      "iban_surrogate": "ES00-LAB-0000000000000010",
+      "income_band": "MEDIUM",
+      "risk_score": 770,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_010",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 11,
+      "link_key": "539585718a81c219638825ee",
+      "recovered_nif": "78901234X",
+      "decoded_weak_obfuscation": "78901234X",
+      "synthetic_name": "PERSONA_SINTETICA_011",
+      "birth_year": 1998,
+      "postcode": "28011",
+      "email": "persona011@example.invalid",
+      "phone": "+34910000011",
+      "policy_number": "POL-LAB-00000011",
+      "iban_surrogate": "ES00-LAB-0000000000000011",
+      "income_band": "HIGH",
+      "risk_score": 807,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_011",
+      "credential_control": "scrypt"
+    },
+    {
+      "customer_id": 12,
+      "link_key": "424b9f2794e1c5dc71ffa260",
+      "recovered_nif": "98765432M",
+      "decoded_weak_obfuscation": "98765432M",
+      "synthetic_name": "PERSONA_SINTETICA_012",
+      "birth_year": 1966,
+      "postcode": "28012",
+      "email": "persona012@example.invalid",
+      "phone": "+34910000012",
+      "policy_number": "POL-LAB-00000012",
+      "iban_surrogate": "ES00-LAB-0000000000000012",
+      "income_band": "LOW",
+      "risk_score": 844,
+      "synthetic_note": "NOTA_SINTETICA_SIN_DATOS_PERSONALES_012",
+      "credential_control": "scrypt"
+    }
+  ]
+}

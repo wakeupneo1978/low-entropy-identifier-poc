@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this laboratory or its results, please cite it as follows."
+title: "One Hundred Million Is Not Entropy: Low-Entropy Identifier PoC"
+type: software
+authors:
+  - family-names: "Martinez"
+    given-names: "Fernando"
+repository-code: "https://github.com/wakeupneo1978/low-entropy-identifier-poc"
+url: "https://github.com/wakeupneo1978/low-entropy-identifier-poc"
+version: 1.0.0
+date-released: 2026-08-01
+license: MIT
+keywords:
+  - pseudonymization
+  - data-protection
+  - sha256
+  - low-entropy-identifiers
+  - gdpr
+  - reproducible-research

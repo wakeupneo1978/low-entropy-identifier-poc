@@ -1,0 +1,34 @@
+# Native build products
+build/
+
+# Generated synthetic lab data
+lab/*.db
+
+# Generated run outputs (the curated baseline files remain tracked)
+results/targets.txt
+results/reconstruction_smoke.json
+results/reconstruction_mac*.json
+results/benchmark_mac*.json
+results/mac_*.json
+results/mac_*.sha256
+results/figures_mac/
+results/benchmark_quick.json
+
+# Python and Jupyter
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local plotting and editor state
+.matplotlib-cache/
+.DS_Store
+.idea/
+.vscode/
+research/portada_linkedin_cien_millones_entropia.png
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
