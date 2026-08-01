@@ -54,7 +54,7 @@
   },
   "scope": "entirely synthetic laboratory",
   "tests": {
-    "reported_seconds": 0.793,
+    "reported_seconds": 0.72,
     "status": "passed",
     "tests_run": 5
   },

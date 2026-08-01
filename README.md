@@ -140,8 +140,8 @@ persona ni se relaciona con atributos reales.
 | Diseño | Efecto si se extrae la base de datos |
 | --- | --- |
 | `SHA256(DNI)` | Una pasada permite comprobar todos los objetivos que compartan normalización y transformación. |
-| `SHA256(sal_global || DNI)` con sal conocida | Exige recalcular para esa sal, pero mantiene una sola pasada para todos los objetivos. |
-| `SHA256(sal_fila || DNI)` con sal almacenada | Evita amortizar una única pasada masiva; no impide una búsqueda dirigida por registro. |
+| `SHA256(sal_global ‖ DNI)` con sal conocida | Exige recalcular para esa sal, pero mantiene una sola pasada para todos los objetivos. |
+| `SHA256(sal_fila ‖ DNI)` con sal almacenada | Evita amortizar una única pasada masiva; no impide una búsqueda dirigida por registro. |
 | `HMAC-SHA256(clave, DNI)` | Sin la clave no se pueden validar candidatos; la clave debe estar separada de los datos extraídos. |
 | Token aleatorio y correspondencia separada | No existe una relación matemática que enumerar; la tabla de correspondencia se convierte en el activo crítico. |
 
