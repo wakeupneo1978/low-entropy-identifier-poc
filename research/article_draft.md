@@ -144,8 +144,12 @@ ronda 6,98 GiB antes de indexación. Cabe en un portátil corriente.
 Ni siquiera es necesario guardarla. El ataque puede recorrer el dominio en
 streaming y conservar solo las coincidencias.
 
-El código, los datos sintéticos, las pruebas y los resultados forman parte de
-una PoC reproducible.
+El código, el generador de datos sintéticos, el notebook, las pruebas y los
+resultados están publicados en
+[GitHub](https://github.com/wakeupneo1978/low-entropy-identifier-poc). El
+repositorio no contiene datos personales ni artefactos procedentes de
+filtraciones y permite reproducir tanto la enumeración como la reconstrucción
+multitabla.
 
 ## La sal no es lo mismo que el secreto
 
